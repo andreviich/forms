@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <img src="imgs/close.png" alt="" class="close">
+        <h3>Оставить заявку<br>на доставку образцов</h1>
+        <form action="">
+            <div class="input_block">
+                <label for="">Имя</label>
+                <input type="text" name="name" placeholder="Имя">
+                <div class="error">Не верный формат данных</div>
+            </div>
+            <div class="input_block">
+                <label for="">Телефон</label>
+                <input type="phone" name="phone" placeholder="+7(___)___-__-__">
+                <div class="error active">Не верный формат данных</div>
+            </div>
+            <div class="input_block checkbox_block">
+                <input type="checkbox" id="agreement" placeholder="+7(___)___-__-__" >
+                <label for="agreement"></label>
+                <span>Я даю согласие на <u><a href="#">обработку персональных данных</a></u></span>
+            </div>
+            <input type="submit" name="submit" id="" value="Отправить заявку" disabled>
+        </form>
+    </div>
+</body>
+</html>

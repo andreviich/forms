@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap')
+*
+    box-sizing: border-box 
+body
+    font-family: 'Roboto Condensed', sans-serif
+    background-color: #e0e0e0
+a
+    color: #000
+input
+    border: none
+    &:focus
+        outline: none
+.form
+    position: fixed
+    width: 450px
+    height: 600px
+    padding: 60px
+    background-color: #fff
+    display: flex
+    flex-direction: column
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    h3
+        font-size: 26px
+        line-height: 33.8px
+        margin-bottom: 40px
+    form
+        display: flex
+        flex-direction: column
+        .input_block
+            display: flex
+            flex-direction: column
+            margin-bottom: 20px
+            label
+                margin-bottom: 7px
+                font-weight: bold
+            &:last-child
+                margin-bottom: 0
+            input[type=text],input[type=phone]
+                width: 350px
+                height: 50px
+                padding: 13.5px 20px
+                border: 1px solid rgba(25, 25, 25, 0.1)
+                color: #191919
+                font-size: 16px
+                &::placeholder
+                    color: rgba(#191919, 0.3)
+            .error
+                color: #E12828
+                margin-top: 10px
+                display: none
+                &.active
+                    display: block
+        .checkbox_block
+            display: flex
+            flex-direction: row
+            input
+                display: none
+            input:checked 
+                display: none
+                & + label
+                    // display: none
+                    &::after
+                        width: 6.75px
+                        height: 6.75px
+                        content: ''
+                        box-sizing: border-box
+                        display: block
+                        position: absolute
+                        background-color: #191919
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+            label
+                position: relative
+                cursor: pointer
+                width: 18px
+                height: 18px
+                margin-bottom: 0
+                margin-right: 10px
+                &::before
+                    content: ''
+                    display: block
+                    width: 18px
+                    height: 18px
+                    top: 0
+                    box-sizing: border-box
+                    left: 0
+                    border: 1px solid rgba(25, 25, 25, 0.2)
+        input[type=submit]
+            width: 293px
+            height: 55px
+            font-weight: bold
+            color: #191919
+            font-size: 18px
+            background-color:#FFD741
+            cursor: pointer
+        input:disabled
+            background-color: rgba(25, 25, 25, 0.2)
+.thanks
+    width: 450px
+    height: 405px
+    padding: 60px
+    background-color: #fff
+    display: flex
+    flex-direction: column
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    h3
+        font-size: 26px
+        line-height: 33.8px
+        padding-bottom: 30px
+        margin-bottom: 0
+        margin-top: 0
+
+    p
+        padding-bottom: 40px
+        margin-bottom: 0
+        margin-top: 0
+        font-size: 18px
+    a
+        width: 293px
+        height: 55px
+        background-color:#FFD741
+        color: #131313
+        text-decoration: none
+        font-weight: bold
+        font-size: 18px
+        display: flex
+        justify-content: center
+        align-items: center
+.form, .thanks
+    .close
+        position: absolute
+        top: 20px
+        right: 20px
+        width: 50px
+        height: 50px
+        cursor: pointer
